@@ -31,6 +31,7 @@ public class VentanaHash extends JFrame{
 		continueb.setBorder(new LineBorder(Color.WHITE, 3, false));
 		continueb.setBackground(new Color(0,0,0,0));
 		continueb.setForeground(Color.WHITE);
+		continueb.setEnabled(false);
 		continueb.setFocusable(false);
 		panel.add(continueb);
 		fondoL = new JLabel();
@@ -42,7 +43,7 @@ public class VentanaHash extends JFrame{
 
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				// TODO Auto-generated method stub
+				continueb.setVisible(false);
 				
 			}
 
@@ -80,10 +81,12 @@ public class VentanaHash extends JFrame{
 			public void run() {
 				if(continueb.getY() < 280) {
 					continueb.setLocation(continueb.getX(), continueb.getY() + 1);
+				}else {
+					continueb.setEnabled(true);
 				}
 			}
 			
 		};
-		timer.schedule(time, 0, 25);
+		timer.schedule(time, 0, 10);
 	}
 }
