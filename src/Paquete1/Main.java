@@ -6,6 +6,6 @@ public class Main {
 		//v.setVisible(true);
 		VentanaHash vh = new VentanaHash();
 		vh.setVisible(true);
-		System.out.println(vh.deleteLast("hola"));
+		
 	}
 }
