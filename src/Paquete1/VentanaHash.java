@@ -34,11 +34,13 @@ public class VentanaHash extends JFrame{
 		hashM = new JLabel("Hash code",SwingConstants.CENTER);
 		hashM.setBounds(20, 215, 140, 40);
 		hashM.setForeground(Color.WHITE);
+		hashM.setVisible(false);
 		hashM.setFont(new Font("Arial", Font.ITALIC, 15));
 		me  =  new JLabel("Normal Words", SwingConstants.CENTER);
 		me.setBounds(340, 215, 140, 40);
 		me.setForeground(Color.WHITE);
 		me.setFont(new Font("Arial", Font.ITALIC, 15));
+		me.setVisible(false);
 		panel.add(me);
 		//hashM.setBorder(new LineBorder(Color.WHITE));
 		panel.add(hashM);
@@ -83,6 +85,8 @@ public class VentanaHash extends JFrame{
 				continueb.setVisible(false);
 				s1.setVisible(true);
 				s2.setVisible(true);
+				me.setVisible(true);
+				hashM.setVisible(true);
 				
 			}
 
