@@ -14,8 +14,11 @@ public class Ventana1 extends JFrame{
 	ImageIcon fondo = new ImageIcon("fondo.jpg");
 	JPanel panel;
 	JLabel label;
+	VentanaHash vh;
+	JFrame fr;
 	Timer timer;
 	public Ventana1 () {
+		fr = this;
 		timer = new Timer();
 		this.setSize(500, 500);
 		this.setLocationRelativeTo(null);
@@ -23,7 +26,7 @@ public class Ventana1 extends JFrame{
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		panel = new JPanel();
 		panel.setLayout(null);
-		//panel.setBackground(Color.BLACK);
+		panel.setBackground(Color.BLACK);
 		this.add(panel);
 		label = new JLabel("Aura");
 		label.setBounds(150, 170, 200, 80);//x = 150 y = 170
@@ -57,6 +60,11 @@ public class Ventana1 extends JFrame{
 					label.setFont(new Font("Arial", Font.ITALIC, 50 ));
 					label.setText("Happy birthday!!!");
 					f = 6;
+				}else if(f == 6) {
+					vh = new VentanaHash();
+					vh.setVisible(true);
+					f = 7;
+					fr.setVisible(false);
 				}
 				
 			}
