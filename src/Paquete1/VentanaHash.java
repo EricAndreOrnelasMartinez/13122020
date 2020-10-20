@@ -207,7 +207,7 @@ public class VentanaHash extends JFrame{
 		return r;
 	}
 	public String deleteLast(String x) {
-		String y = "", r = "";
+		String y = "";
 		for(int a = 0; a < x.length() -1; a++) {
 			y = y + x.split("")[a];
 		}
