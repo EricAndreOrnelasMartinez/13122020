@@ -180,7 +180,7 @@ public class VentanaHash extends JFrame{
 				if(arg0.getKeyChar() != '') {
 					t1.append(hashBack(res));
 				}else {
-					t1.setText(deleteLast(t2.getText()));
+					t1.setText(deleteLast(t1.getText()));
 				}
 				
 			}
