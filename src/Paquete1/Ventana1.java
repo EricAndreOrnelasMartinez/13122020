@@ -13,7 +13,7 @@ import javax.swing.JLabel;
 public class Ventana1 extends JFrame{
 	ImageIcon fondo = new ImageIcon("fondo.jpg");
 	JPanel panel;
-	JLabel label;
+	JLabel label,x1, y;
 	VentanaHash vh;
 	JFrame fr;
 	Timer timer;
@@ -28,6 +28,20 @@ public class Ventana1 extends JFrame{
 		panel.setLayout(null);
 		panel.setBackground(Color.BLACK);
 		this.add(panel);
+		x1 = new JLabel("y1  -  y2");
+		x1.setBounds(235 - 60, 148, 3000, 50);
+		x1.setBackground(Color.red);
+		x1.setFont(new Font("Arial", Font.ITALIC, 50 ));
+		x1.setVisible(false);
+		x1.setForeground(Color.WHITE);
+		panel.add(x1);
+		y = new JLabel("x1  -  x2");
+		y.setBounds(235 - 60, 237, 3000, 50);
+		y.setForeground(Color.WHITE);
+		y.setBackground(Color.red);
+		y.setVisible(false);
+		y.setFont(new Font("Arial", Font.ITALIC, 50 ));
+		panel.add(y);
 		label = new JLabel("Aura");
 		label.setBounds(150, 170, 200, 80);//x = 150 y = 170
 		label.setForeground(Color.WHITE);
@@ -56,15 +70,28 @@ public class Ventana1 extends JFrame{
 					label.setText("Aura();");
 					f = 5;
 				}else if(f == 5) {
-					label.setLocation(20, 170);
+					label.setLocation(40, 170);
 					label.setFont(new Font("Arial", Font.ITALIC, 50 ));
 					label.setText("Happy birthday!!!");
 					f = 6;
 				}else if(f == 6) {
-					vh = new VentanaHash();
-					vh.setVisible(true);
+					label.setText("I will be always...");
 					f = 7;
-					fr.setVisible(false);
+				}else if(f == 7) {
+					label.setLocation(150, 170);
+					//label.setOpaque(true);
+					label.setSize(3000, 35);
+					label.setLocation(130 - 60, 200);
+					//label.setBackground(Color.red);
+					label.setText("m = -----------");
+					x1.setVisible(true);
+					y.setVisible(true);
+					f = 8;
+				}else if(f == 8) {
+					x1.setVisible(false);
+					y.setVisible(false);
+					label.setBounds(150, 170, 200, 80);
+					label.setText("Of you");
 				}
 				
 			}
