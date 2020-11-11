@@ -23,6 +23,7 @@ public class Ventana1 extends JFrame{
 		this.setSize(500, 500);
 		this.setLocationRelativeTo(null);
 		this.setResizable(false);
+		this.setTitle("For my BF");
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		panel = new JPanel();
 		panel.setLayout(null);
@@ -92,6 +93,12 @@ public class Ventana1 extends JFrame{
 					y.setVisible(false);
 					label.setBounds(150, 170, 200, 80);
 					label.setText("Of you");
+					f = 9;
+				}else if(f == 9) {
+					fr.setVisible(false);
+					vh = new VentanaHash();
+					vh.setVisible(true);
+					f = 10;
 				}
 				
 			}

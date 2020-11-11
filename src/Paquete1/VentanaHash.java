@@ -14,7 +14,7 @@ import javax.swing.border.LineBorder;
 
 @SuppressWarnings("serial")
 public class VentanaHash extends JFrame{
-	ImageIcon fondo = new ImageIcon(".imagenes/fondo1.jpg");
+	ImageIcon fondo = new ImageIcon("./.imagenes/fondo1.jpg");
 	JPanel panel;
 	JButton continueb;
 	JLabel fondoL, hashM, me;
@@ -26,6 +26,7 @@ public class VentanaHash extends JFrame{
 		this.setSize(500, 500);
 		this.setLocationRelativeTo(null);
 		this.setResizable(false);
+		this.setTitle("For my BF");
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		panel = new JPanel();
 		panel.setLayout(null);
